@@ -31,9 +31,14 @@ javascript: (function() {
 			o = "Next LG: " + (_lgSize - t);
 			p = "Pre SM: " + (t - _smSize - (_mdSize - _smSize));
 		}
-		else {
+		else if (t > _smSize) {
 			e = "SM";
 			o = "Next MD: " + (_mdSize - t);
+			p = "N/A"
+		}
+		else {
+			e = "Default";
+			o = "Next SM: " + (_smSize - t);
 			p = "N/A"
 		}
         
